@@ -1,6 +1,13 @@
+import Footer from "./Footer";
+import Header from "./Header";
+
 function Starships() {
     return (
-        <div>Find your starship</div>
+        <div>
+            <Header />
+            <div>Find your starship</div>
+            <Footer />
+        </div>
     );
   }
   
