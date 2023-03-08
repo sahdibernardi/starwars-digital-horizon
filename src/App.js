@@ -1,11 +1,14 @@
 import logo from './logo.svg';
 import './App.css';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, Route } from 'react-router-dom';
 
 function App() {
   return (
-    <BrowserRouter>
-    </BrowserRouter>
+    <AppProvider>
+      <BrowserRouter>
+        <Route path="" component={}/>
+      </BrowserRouter>
+    </AppProvider>
   );
 }
 
