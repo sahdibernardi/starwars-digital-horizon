@@ -7,7 +7,7 @@ function Menu() {
 
         switch (targetName) {
             case ('button-home'):
-                history.push('/home')
+                history.push('/')
                 break;
             case ('button-planets'):
                 history.push('/planets')
