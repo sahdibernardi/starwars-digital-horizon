@@ -1,71 +1,46 @@
-# Getting Started with Create React App
+# SWAPI Data Consumption Project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## About This Project
+This project is a challenge to create a system that consumes the SWAPI endpoint (https://swapi.dev/) and displays information about planets and characters in the Star Wars universe.
 
-## Available Scripts
+## Introduction
+The goal of this project is to create a webpage with a menu that allows the user to select between two options:
 
-In the project directory, you can run:
+- Show at least 3 planets with their names and terrain.
+- Show at least 5 characters with their names, birth dates, and vehicles. When clicking on the vehicles, show information about the starships, such as their name, model, and cost.
+- The project is designed to test the programmer's logical thinking, methodology, dynamism, and layout skills.
 
+## Technologies
+This project was created using the following technologies:
+
+- React.js
+- Node.js
+- CSS (version X)
+- MUI Library
+
+## How to Use
+Clone this repository
+Install the required dependencies using npm
+Run the project using the command 
 ### `npm start`
+Access the project at http://localhost:3000/
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+For testing the application, you run the tests using
+### `npm test`
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+
+
+## Features
+1. Displays information about planets and characters in the Star Wars universe.
+2. Allows the user to select between two options using a menu.
+3. Shows at least 3 planets with their names and terrain.
+5. Shows at least 5 characters with their names, birth dates, and vehicles.
+6. Displays information about the starships, such as their name, model, and cost.
+
+## Contributing
+If you would like to contribute to this project, please fork the repository and submit a pull request.
 
 ### `npm test`
 
 Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# starwars-digital-horizon
