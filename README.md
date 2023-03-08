@@ -22,7 +22,7 @@ This project was created using the following technologies:
 ## How to Use
 Clone this repository
 Install the required dependencies using:
-## `npm install`
+### `npm install`
 
 Run the project using the command 
 ### `npm start`
