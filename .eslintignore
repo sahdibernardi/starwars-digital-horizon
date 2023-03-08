@@ -1,0 +1,5 @@
+cypress/*
+coverage/*
+src/tests/*
+src/mockAPI/*
+cypress.config.js

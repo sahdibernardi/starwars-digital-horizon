@@ -14,13 +14,16 @@ The goal of this project is to create a webpage with a menu that allows the user
 This project was created using the following technologies:
 
 - React.js
+- React Router
 - Node.js
 - CSS (version X)
 - MUI Library
 
 ## How to Use
 Clone this repository
-Install the required dependencies using npm
+Install the required dependencies using:
+## `npm install`
+
 Run the project using the command 
 ### `npm start`
 Access the project at http://localhost:3000/
