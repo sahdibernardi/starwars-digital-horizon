@@ -2,7 +2,7 @@ import { useHistory } from "react-router-dom";
 
 function Menu() {
     const history = useHistory();
-    const redirectButton = ({target}) => {
+    const redirectButton = ({ target }) => {
         const targetName = target.name;
 
         switch (targetName) {
@@ -25,6 +25,7 @@ function Menu() {
 
     return (
         <div className="menu">
+            <h3>Functionality Menu</h3>
             <button className="menu-button" type="button" name="button-home" onClick={redirectButton}>
                 Home
             </button>
