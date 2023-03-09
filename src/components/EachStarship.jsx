@@ -17,7 +17,7 @@ function EachStarship() {
             {( isLoading ? 
                 <Loader /> :
             <div>
-                <h3>{ oneStarship.name }</h3>
+                <h3 id="starship-title">{ oneStarship.name }</h3>
                 <div className="table">
                     <div className="table-header">
                         <table>

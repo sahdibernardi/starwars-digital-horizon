@@ -161,6 +161,16 @@ td{
   margin: 3px;
 }
 
+#starship-title {
+  font-weight: bolder;
+  padding: 20px 15px;
+  text-align: center;
+  font-weight: bolder;
+  font-size: 36px;
+  color: #feda4a;
+  text-transform: uppercase;
+}
+
 .footer {
   display: flex;
   justify-content: center;
