@@ -9,6 +9,9 @@ body {
   color: white;
   margin: 0;
   padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
 
 #logo {
@@ -30,6 +33,7 @@ body {
 }
 
 .menu-button {
+  z-index: 1;
   color: white;
   text-transform:uppercase;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -44,4 +48,44 @@ body {
 .menu-button:hover {
   border: 2px #ffd0d0 solid;
   box-shadow: 0 0 30px #f00, 0 0 30px #f00;
+}
+
+.star-wars {
+  display: flex;
+  justify-content: center;
+  height: 800px;
+  perspective: 400px;
+  color: #feda4a;
+  font-family: 'Pathway Gothic One', sans-serif;
+  font-size: 500%;
+  font-weight: 600;
+  letter-spacing: 6px;
+  line-height: 150%;
+  text-align: justify;
+}
+
+.crawl {
+  /* Position the element so we can adjust the top property in the animation */
+  position: relative;
+  /* Making sure the text is fully off the screen at the start and end of the animation */
+  top: -100px;
+  /* Defines the skew origin at the very center when we apply transforms on the animation */
+  transform-origin: 70% 100%;
+  animation: crawl 60s linear;
+  animation-iteration-count: 10;
+}
+
+@keyframes crawl {
+  0% {
+    /* The element starts below the screen */
+    top: 0;
+    /* Rotate the text 20 degrees but keep it close to the viewer */
+    transform: rotateX(20deg) translateZ(0);
+  }
+  100% { 
+    /* This is a magic number, but using a big one to make sure the text is fully off the screen at the end */
+    top: -4000px;
+    /* Slightly increasing the rotation at the end and moving the text far away from the viewer */
+    transform: rotateX(25deg) translateZ(-2500px);
+  }
 }
