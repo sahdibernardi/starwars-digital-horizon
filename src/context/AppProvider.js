@@ -7,6 +7,7 @@ function AppProvider({ children }) {
   const [allPlanets, setAllPlanets] = useState([]);
   const [allPeople, setAllPeople] = useState([]);
   const [allStarships, setAllStarships] = useState([]);
+  const [oneStarship, setOneStarships] = useState([]);
 
   useEffect(() => {
     fetchPlanets().then((result) => {
@@ -27,13 +28,17 @@ function AppProvider({ children }) {
     setAllPeople,
     allStarships,
     setAllStarships,
+    oneStarship,
+    setOneStarships,
     
   }), [allPlanets,
     setAllPlanets,
     allPeople,
     setAllPeople,
     allStarships,
-    setAllStarships,]);
+    setAllStarships,
+    oneStarship,
+    setOneStarships,]);
 
   return (
     <AppContext.Provider value={ values }>
