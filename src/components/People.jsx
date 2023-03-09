@@ -7,7 +7,7 @@ import Header from "./Header";
 import { fetchOneStarship } from '../services/fetchAPI';
 
 function People() {
-    const { allPeople, setOneStarship } = useContext(AppContext);
+    const { allPeople, setOneStarship, allStarships, allVehicles, isLoading } = useContext(AppContext);
     const history = useHistory();
 
     const handleVehicleClick = async ({ target }) => {
@@ -17,9 +17,29 @@ function People() {
         history.push('/each-starship');
     };
 
+    const searchVehicleName = (endpoint) => {
+        if(endpoint.match(/starships/)){
+            const filteredS = allStarships.find((s) => s.url === endpoint);
+            if(filteredS) {
+                return(filteredS.name)
+            } return(undefined);
+        }
+        if(endpoint.match(/vehicles/)){
+            const filteredV = allVehicles.find((v) => v.url === endpoint);
+            if(filteredV) {
+                return(filteredV.name)
+            } else return(undefined);
+        }
+        if(!endpoint) {
+            return (undefined);
+        }
+    };
+
     return (
         <div>
             <Header />
+            {( isLoading ? 
+                <div>Loading ...</div> :
             <div className="table">
                 <div className="table-header">
                     <table>
@@ -28,7 +48,6 @@ function People() {
                             <th>Name</th>
                             <th>Birth Year</th>
                             <th>Vehicles</th>
-                            <th>Homeworld</th>
                         </tr>
                         </thead>
                     </table>
@@ -42,13 +61,8 @@ function People() {
                                     <td>{ p.birth_year }</td>
                                     <td onClick={ handleVehicleClick }>
                                         <div>
-                                    { p.vehicles.concat(p.starships).map((s) => <button key={ s } name={ s } className="starships-button">{ s }</button>) }
+                                    { p.vehicles.concat(p.starships).map((s) => <button key={ s } name={ s } className="starships-button">{ searchVehicleName(s) }</button>) }
                                         </div>
-                                    </td>
-                                    <td>
-                                        <button type="button" name={ p.homeworld }>
-                                        { p.homeworld }
-                                        </button>
                                     </td>
                                 </tr>
                             ))}
@@ -56,6 +70,7 @@ function People() {
                     </table>
                 </div>
             </div>
+            )}
             <Footer />
         </div>
     );

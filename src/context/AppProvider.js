@@ -1,13 +1,15 @@
 import { useEffect, useMemo, useState } from 'react';
 import propTypes from 'prop-types';
 import AppContext from './AppContext';
-import { fetchAllStarships, fetchPeople, fetchPlanets, fetchStarships } from '../services/fetchAPI';
+import { fetchAllStarships, fetchAllVehicles, fetchPeople, fetchPlanets } from '../services/fetchAPI';
 
 function AppProvider({ children }) {
   const [allPlanets, setAllPlanets] = useState([]);
   const [allPeople, setAllPeople] = useState([]);
   const [allStarships, setAllStarships] = useState([]);
+  const [allVehicles, setAllVehicles] = useState([]);
   const [oneStarship, setOneStarship] = useState([]);
+  const [isLoading, setIsLoading] = useState([true]);
 
   useEffect(() => {
     fetchPlanets().then((result) => {
@@ -16,11 +18,12 @@ function AppProvider({ children }) {
     fetchPeople().then((result) => {
       setAllPeople(result);
     });
-    fetchStarships().then((result) => {
+    fetchAllStarships().then((result) => {
       setAllStarships(result);
     });
-    fetchAllStarships().then((result) => {
-      console.log(result);
+    fetchAllVehicles().then((result) => {
+      setAllVehicles(result);
+      setIsLoading(false)
     });
   }, []);
 
@@ -33,6 +36,10 @@ function AppProvider({ children }) {
     setAllStarships,
     oneStarship,
     setOneStarship,
+    allVehicles,
+    setAllVehicles,
+    isLoading,
+    setIsLoading,
     
   }), [allPlanets,
     setAllPlanets,
@@ -41,7 +48,11 @@ function AppProvider({ children }) {
     allStarships,
     setAllStarships,
     oneStarship,
-    setOneStarship,]);
+    setOneStarship,
+    allVehicles,
+    setAllVehicles,
+    isLoading,
+    setIsLoading,]);
 
   return (
     <AppContext.Provider value={ values }>

@@ -22,18 +22,6 @@ export const fetchPeople = async () => {
   }
 };
 
-export const fetchStarships = async () => {
-  try {
-    const endpoint = 'https://swapi.dev/api/starships';
-    const starshipFetch = await fetch(endpoint);
-    const result = await starshipFetch.json();
-    const starshipArray = result.results;
-    return starshipArray;
-  } catch (error) {
-    console.error(error);
-  }
-};
-
 export const fetchOneStarship = async (endpoint) => {
   try {
     const starshipFetch = await fetch(endpoint);
@@ -47,11 +35,41 @@ export const fetchOneStarship = async (endpoint) => {
 
 export const fetchAllStarships = async () => {
   try {
-    const endpoint = 'https://swapi.dev/api/starships/schema/';
-    const starshipFetch = await fetch(endpoint);
-    const result = await starshipFetch.json();
-    // const starshipArray = result.results;
-    return result;
+    const endpoint1 = 'https://swapi.dev/api/starships/';
+    const endpoint2 = 'https://swapi.dev/api/starships/?page=2';
+    const endpoint3 = 'https://swapi.dev/api/starships/?page=3';
+    const endpoint4 = 'https://swapi.dev/api/starships/?page=4';
+    const page1 = await fetch(endpoint1);
+    const page2 = await fetch(endpoint2);
+    const page3 = await fetch(endpoint3);
+    const page4 = await fetch(endpoint4);
+    const result1 = await page1.json();
+    const result2 = await page2.json();
+    const result3 = await page3.json();
+    const result4 = await page4.json();
+    const finalArray = (result1.results).concat((result2.results), (result3.results), (result4.results));
+    return finalArray;
+  } catch (error) {
+    console.error(error);
+  }
+};
+
+export const fetchAllVehicles = async () => {
+  try {
+    const endpoint1 = 'https://swapi.dev/api/vehicles/';
+    const endpoint2 = 'https://swapi.dev/api/vehicles/?page=2';
+    const endpoint3 = 'https://swapi.dev/api/vehicles/?page=3';
+    const endpoint4 = 'https://swapi.dev/api/vehicles/?page=4';
+    const page1 = await fetch(endpoint1);
+    const page2 = await fetch(endpoint2);
+    const page3 = await fetch(endpoint3);
+    const page4 = await fetch(endpoint4);
+    const result1 = await page1.json();
+    const result2 = await page2.json();
+    const result3 = await page3.json();
+    const result4 = await page4.json();
+    const finalArray = (result1.results).concat((result2.results), (result3.results), (result4.results));
+    return finalArray;
   } catch (error) {
     console.error(error);
   }
