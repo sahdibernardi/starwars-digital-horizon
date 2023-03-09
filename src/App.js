@@ -1,4 +1,5 @@
-import { BrowserRouter, Route, process } from 'react-router-dom';
+/* eslint-disable no-undef */
+import { BrowserRouter, Route } from 'react-router-dom';
 import EachStarship from './components/EachStarship';
 import Home from './components/Home';
 import People from './components/People';
@@ -10,7 +11,7 @@ import './App.css';
 function App() {
   return (
     <AppProvider>
-      <BrowserRouter basename={process.env.PUBLIC_URL}>
+      <BrowserRouter>
         <Route exact path="/" component={ Home }/>
         <Route path="/planets" component={ Planets }/>
         <Route path="/starships" component={ Starships }/>
