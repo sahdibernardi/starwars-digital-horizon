@@ -1,4 +1,4 @@
-import vader from '../images/vader.gif'
+import vader from '../media/vader.gif'
 
 
 function Loader() {

@@ -1,5 +1,5 @@
 body {
-  background-image: url('../src/images/Star\ Wars\ Space\ Background\ HQ.jpeg');
+  background-image: url('../src/media/Star\ Wars\ Space\ Background\ HQ.jpeg');
   box-sizing: border-box;
   color: white;
   margin: 0;
@@ -16,6 +16,24 @@ body {
 .logo-div {
   display: flex;
   justify-content: center;
+}
+
+audio {
+  width: 200px;
+  height: 25px;
+}
+
+.audio-div {
+  display: flex;
+  justify-content: center;
+}
+
+#audio-file::-webkit-media-controls-panel {
+  background-color:  rgb(189, 189, 189);
+}
+
+#audio-file {
+  width: 7%;
 }
 
 .menu {

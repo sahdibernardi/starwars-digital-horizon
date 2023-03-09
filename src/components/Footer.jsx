@@ -1,4 +1,4 @@
-import fight from '../images/vader-and-luke.gif'
+import fight from '../media/vader-and-luke.gif'
 
 
 function Footer() {
