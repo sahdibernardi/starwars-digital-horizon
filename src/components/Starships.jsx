@@ -23,7 +23,7 @@ function Starships() {
                         <th>Starship Class</th>
                     </tr>
                 </thead>
-                <tbody data-testid="table-body-planets">
+                <tbody data-testid="table-body-starships">
                 {allPlanets.map((p) => (
                     <tr key={ p.name }>
                     <td>{ p.name }</td>

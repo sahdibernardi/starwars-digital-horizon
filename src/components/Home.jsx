@@ -5,7 +5,6 @@ function Home() {
     return (
         <div>
             <Header />
-            <div>We are finally home </div>
             <Footer />
         </div>
     );

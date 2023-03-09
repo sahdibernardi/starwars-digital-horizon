@@ -5,6 +5,7 @@ import People from './components/People';
 import Planets from './components/Planets';
 import Starships from './components/Starships';
 import AppProvider from './context/AppProvider';
+import './App.css';
 
 function App() {
   return (

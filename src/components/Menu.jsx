@@ -25,7 +25,6 @@ function Menu() {
 
     return (
         <div className="menu">
-            <h3>Functionality Menu</h3>
             <button className="menu-button" type="button" name="button-home" onClick={redirectButton}>
                 Home
             </button>
