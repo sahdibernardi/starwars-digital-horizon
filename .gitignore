@@ -10,7 +10,7 @@
 
 # production
 /build
-/docsgit 
+/docs
 
 # misc
 .DS_Store
