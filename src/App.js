@@ -1,4 +1,3 @@
-/* eslint-disable no-undef */
 import { Route, HashRouter } from 'react-router-dom';
 import EachStarship from './components/EachStarship';
 import Home from './components/Home';
