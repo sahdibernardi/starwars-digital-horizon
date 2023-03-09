@@ -1,9 +1,8 @@
-import Footer from "./Footer";
 import Header from "./Header";
 
 function Home() {
     return (
-        <div>
+        <div className="home">
             <Header />
             <section className="star-wars">
                 <div className="crawl">
@@ -12,9 +11,11 @@ function Home() {
                     <h1>SWAPI PROJECT</h1>
                     </div>
                     
-                    <p>It is a period of civil war. Rebel spaceships, striking from a hidden base, have won their first victory against the evil Galactic Empire.</p>     
-                    <p>During the battle, Rebel spies managed to steal secret plans to the Empire’s ultimate weapon, the DEATH STAR, an armored space station with enough power to destroy an entire planet.</p>
-                    <p>Pursued by the Empire’s sinister agents, Princess Leia races home aboard her starship, custodian of the stolen plans that can save her people and restore freedom to the galaxy…</p>
+                    <p>A long time ago, in a galaxy far far away...</p>     
+                    <p>The Resistance member Sahra Di Bernardi was challenged by Digital Horizon`s Recruitment process to build a website using StarWars API (Swapi)</p>
+                    <p>Using JavaScript, React.js, ContextAPI, ReactRouter, HTML, and CSS she flew away from the Imperial TIE Fighters to reach home and finally deliver the complete project to the Resistence leaders</p>
+                    <p>She`s sure that the project can be improved, but that`ll take the help and feedback of the Senior members of the Resistence</p>
+                    <p>Will you help her?</p>
                 </div>
             </section>
         </div>

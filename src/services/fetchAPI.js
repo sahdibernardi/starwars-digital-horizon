@@ -44,3 +44,15 @@ export const fetchOneStarship = async (endpoint) => {
     return('does not owe a vehicle');
   }
 };
+
+export const fetchAllStarships = async () => {
+  try {
+    const endpoint = 'https://swapi.dev/api/starships/schema/';
+    const starshipFetch = await fetch(endpoint);
+    const result = await starshipFetch.json();
+    // const starshipArray = result.results;
+    return result;
+  } catch (error) {
+    console.error(error);
+  }
+};

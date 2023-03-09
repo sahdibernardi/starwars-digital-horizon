@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from 'react';
 import propTypes from 'prop-types';
 import AppContext from './AppContext';
-import { fetchPeople, fetchPlanets, fetchStarships } from '../services/fetchAPI';
+import { fetchAllStarships, fetchPeople, fetchPlanets, fetchStarships } from '../services/fetchAPI';
 
 function AppProvider({ children }) {
   const [allPlanets, setAllPlanets] = useState([]);
@@ -18,6 +18,9 @@ function AppProvider({ children }) {
     });
     fetchStarships().then((result) => {
       setAllStarships(result);
+    });
+    fetchAllStarships().then((result) => {
+      console.log(result);
     });
   }, []);
 

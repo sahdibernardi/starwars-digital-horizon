@@ -13,3 +13,10 @@ export const vehicles = async (p) => {
         )
     })
 }
+
+
+export const extractID = (endpoint) => {
+    const id = endpoint.replace(/\D/g, '');
+    console.log(id);
+    // filter starship and vehicles array and return the name.
+}

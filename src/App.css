@@ -1,8 +1,3 @@
-:root {
-  --grey-color: #383838;
-  --font-color: rgb(17, 17, 17);
-}
-
 body {
   background-image: url('../src/images/Star\ Wars\ Space\ Background\ HQ.jpeg');
   box-sizing: border-box;
@@ -12,6 +7,12 @@ body {
   width: 100%;
   height: 100%;
   overflow: hidden;
+}
+
+.home {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
 }
 
 #logo {
@@ -24,7 +25,6 @@ body {
 }
 
 .menu {
-  /* background-color: rgba(102, 102, 102, 0.25); */
   display: flex;
   justify-content: space-around;
   padding: 1rem;
@@ -33,6 +33,7 @@ body {
 }
 
 .menu-button {
+  width: 10rem;
   z-index: 1;
   color: white;
   text-transform:uppercase;
@@ -46,8 +47,8 @@ body {
 }
 
 .menu-button:hover {
-  border: 2px #ffd0d0 solid;
-  box-shadow: 0 0 30px #f00, 0 0 30px #f00;
+  border: 2px #c9e6ff solid;
+  box-shadow: 0 0 40px rgb(0, 76, 255), 0 0 40px rgb(0, 76, 255);
 }
 
 .star-wars {
@@ -65,11 +66,8 @@ body {
 }
 
 .crawl {
-  /* Position the element so we can adjust the top property in the animation */
   position: relative;
-  /* Making sure the text is fully off the screen at the start and end of the animation */
   top: -100px;
-  /* Defines the skew origin at the very center when we apply transforms on the animation */
   transform-origin: 70% 100%;
   animation: crawl 60s linear;
   animation-iteration-count: 10;
@@ -77,15 +75,68 @@ body {
 
 @keyframes crawl {
   0% {
-    /* The element starts below the screen */
     top: 0;
-    /* Rotate the text 20 degrees but keep it close to the viewer */
     transform: rotateX(20deg) translateZ(0);
   }
   100% { 
-    /* This is a magic number, but using a big one to make sure the text is fully off the screen at the end */
     top: -4000px;
-    /* Slightly increasing the rotation at the end and moving the text far away from the viewer */
     transform: rotateX(25deg) translateZ(-2500px);
   }
+}
+
+table{
+  width:100%;
+  table-layout: fixed;
+  background-color: rgba(102, 102, 102, 0.25);
+}
+
+.table-body{
+  height:15rem;
+  overflow-x: scroll;
+  margin-top: 0px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.table-body-eachStarship{
+  height:auto;
+  overflow-x: auto;
+  margin-top: 0px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+th{
+  background-color: rgba(102, 102, 102, 0.80);
+  font-weight: bolder;
+  padding: 20px 15px;
+  text-align: left;
+  font-weight: bolder;
+  font-size: 12px;
+  color: #fff;
+  text-transform: uppercase;
+  
+}
+td{
+  padding: 15px;
+  text-align: left;
+  vertical-align:middle;
+  font-weight: 300;
+  font-size: 12px;
+  color: #fff;
+  border-bottom: solid 1px rgba(255, 255, 255, 0.1);
+}
+
+.starships-button {
+  border: white solid 2px;
+  border-radius: 6px;
+  background-color: rgba(176, 176, 176, 0.8);
+  padding: 3px;
+  margin: 3px;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin-top: 1rem;
+  margin-bottom: auto;
 }
