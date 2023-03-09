@@ -9,12 +9,6 @@ body {
   overflow: hidden;
 }
 
-.home {
-  overflow: hidden;
-  width: 100%;
-  height: 100%;
-}
-
 #logo {
   width: 20rem;
 }
@@ -63,6 +57,12 @@ body {
   letter-spacing: 6px;
   line-height: 150%;
   text-align: justify;
+}
+
+#project-title {
+  font-weight: bolder;
+  letter-spacing: 1.5px;
+  font-size: 200%;
 }
 
 .crawl {
@@ -134,10 +134,77 @@ td{
   margin: 3px;
 }
 
+.starships-button:hover {
+  display: flex;
+  border: white solid 2px;
+  border-radius: 6px;
+  background-color: white;
+  padding: 3px;
+  margin: 3px;
+}
+
 .footer {
   display: flex;
   justify-content: center;
   align-items: flex-end;
   margin-top: 1rem;
   margin-bottom: auto;
+}
+
+.vader-div {
+  display: flex;
+  justify-content: center;
+  margin: 5rem;
+}
+
+.loading-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -150px;
+  color: #feda4a;
+}
+
+#loading {
+  text-transform:uppercase;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  letter-spacing: 1.5px;
+  padding: 10px;
+  margin: 15px;
+}
+
+.dot-typing {
+  position: relative;
+  left: -9999px;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #feda4a;
+  color: #feda4a;
+  box-shadow: 9984px 0 0 0 #feda4a, 9999px 0 0 0 #feda4a, 10014px 0 0 0 #feda4a;
+  animation: dot-typing 1.5s infinite linear;
+}
+
+@keyframes dot-typing {
+  0% {
+    box-shadow: 9984px 0 0 0 #feda4a, 9999px 0 0 0 #feda4a, 10014px 0 0 0 #feda4a;
+  }
+  16.667% {
+    box-shadow: 9984px -10px 0 0 #feda4a, 9999px 0 0 0 #feda4a, 10014px 0 0 0 #feda4a;
+  }
+  33.333% {
+    box-shadow: 9984px 0 0 0 #feda4a, 9999px 0 0 0 #feda4a, 10014px 0 0 0 #feda4a;
+  }
+  50% {
+    box-shadow: 9984px 0 0 0 #feda4a, 9999px -10px 0 0 #feda4a, 10014px 0 0 0 #feda4a;
+  }
+  66.667% {
+    box-shadow: 9984px 0 0 0 #feda4a, 9999px 0 0 0 #feda4a, 10014px 0 0 0 #feda4a;
+  }
+  83.333% {
+    box-shadow: 9984px 0 0 0 #feda4a, 9999px 0 0 0 #feda4a, 10014px -10px 0 0 #feda4a;
+  }
+  100% {
+    box-shadow: 9984px 0 0 0 #feda4a, 9999px 0 0 0 #feda4a, 10014px 0 0 0 #feda4a;
+  }
 }

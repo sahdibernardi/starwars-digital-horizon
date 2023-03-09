@@ -14,10 +14,12 @@ The goal of this project is to create a webpage with a menu that allows the user
 This project was created using the following technologies:
 
 - React.js
+- ContextAPI
 - React Router
 - Node.js
-- CSS (version X)
-- MUI Library
+- JavaScript
+- HTML
+- CSS
 
 ## How to Use
 Clone this repository

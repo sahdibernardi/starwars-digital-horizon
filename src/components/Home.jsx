@@ -8,7 +8,7 @@ function Home() {
                 <div className="crawl">
                     <div className="title">
                     <p>Episode IV: Digital Horizon Project</p>
-                    <h1>SWAPI PROJECT</h1>
+                    <h1 id="project-title">SWAPI PROJECT</h1>
                     </div>
                     
                     <p>A long time ago, in a galaxy far far away...</p>     

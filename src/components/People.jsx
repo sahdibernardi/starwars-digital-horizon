@@ -5,6 +5,7 @@ import { useHistory } from "react-router-dom";
 import Footer from "./Footer";
 import Header from "./Header";
 import { fetchOneStarship } from '../services/fetchAPI';
+import Loader from './Loader';
 
 function People() {
     const { allPeople, setOneStarship, allStarships, allVehicles, isLoading } = useContext(AppContext);
@@ -39,39 +40,41 @@ function People() {
         <div>
             <Header />
             {( isLoading ? 
-                <div>Loading ...</div> :
-            <div className="table">
-                <div className="table-header">
-                    <table>
-                        <thead data-testid="table-header">
-                        <tr>
-                            <th>Name</th>
-                            <th>Birth Year</th>
-                            <th>Vehicles</th>
-                        </tr>
-                        </thead>
-                    </table>
+                <Loader /> :
+            <div>
+                <div className="table">
+                    <div className="table-header">
+                        <table>
+                            <thead data-testid="table-header">
+                            <tr>
+                                <th>Name</th>
+                                <th>Birth Year</th>
+                                <th>Vehicles</th>
+                            </tr>
+                            </thead>
+                        </table>
+                    </div>
+                    <div className="table-body">
+                        <table>
+                            <tbody data-testid="table-body">
+                                {allPeople.map((p) => (
+                                    <tr key={ p.name }>
+                                        <td>{ p.name }</td>
+                                        <td>{ p.birth_year }</td>
+                                        <td onClick={ handleVehicleClick }>
+                                            <div>
+                                        { p.vehicles.concat(p.starships).map((s) => <button key={ s } name={ s } className="starships-button">{ searchVehicleName(s) }</button>) }
+                                            </div>
+                                        </td>
+                                    </tr>
+                                ))}
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
-                <div className="table-body">
-                    <table>
-                        <tbody data-testid="table-body">
-                            {allPeople.map((p) => (
-                                <tr key={ p.name }>
-                                    <td>{ p.name }</td>
-                                    <td>{ p.birth_year }</td>
-                                    <td onClick={ handleVehicleClick }>
-                                        <div>
-                                    { p.vehicles.concat(p.starships).map((s) => <button key={ s } name={ s } className="starships-button">{ searchVehicleName(s) }</button>) }
-                                        </div>
-                                    </td>
-                                </tr>
-                            ))}
-                        </tbody>
-                    </table>
-                </div>
+                <Footer />
             </div>
             )}
-            <Footer />
         </div>
     );
   }

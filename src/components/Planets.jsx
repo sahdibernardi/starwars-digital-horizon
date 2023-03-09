@@ -3,13 +3,16 @@ import AppContext from '../context/AppContext';
 
 import Footer from "./Footer";
 import Header from "./Header";
+import Loader from './Loader';
 
 function Planets() {
-    const { allPlanets } = useContext(AppContext);
+    const { allPlanets, isLoading } = useContext(AppContext);
 
     return (
         <div>
             <Header />
+            {( isLoading ? 
+                <Loader /> :
             <div className="table">
                 <div className="table-header">
                     <table>
@@ -42,9 +45,10 @@ function Planets() {
                         ))}
                         </tbody>
                     </table>
+                <Footer />
                 </div>
             </div>
-            <Footer />
+            )}
         </div>
     );
   }
