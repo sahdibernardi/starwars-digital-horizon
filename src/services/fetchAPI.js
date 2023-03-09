@@ -1,6 +1,3 @@
-import { useContext } from 'react';
-import AppContext from '../context/AppContext';
-
 export const fetchPlanets = async () => {
   try {
     const endpoint = 'https://swapi.dev/api/planets';
@@ -38,13 +35,12 @@ export const fetchStarships = async () => {
 };
 
 export const fetchOneStarship = async (endpoint) => {
-  const { setOneStarship } = useContext(AppContext);
   try {
     const starshipFetch = await fetch(endpoint);
     const result = await starshipFetch.json();
-    const starshipArray = result.results;
-    setOneStarship(starshipArray);
+    return(result);
   } catch (error) {
     console.error(error);
+    return('does not owe a vehicle');
   }
 };

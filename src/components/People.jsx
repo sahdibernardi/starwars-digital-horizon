@@ -1,14 +1,20 @@
 import { useContext } from 'react';
 import AppContext from '../context/AppContext';
+import { useHistory } from "react-router-dom";
 
 import Footer from "./Footer";
 import Header from "./Header";
+import { fetchOneStarship } from '../services/fetchAPI';
 
 function People() {
-    const { allPeople } = useContext(AppContext);
+    const { allPeople, setOneStarship } = useContext(AppContext);
+    const history = useHistory();
 
-    const handleVehicleClick = ({ target }) => {
-        // code
+    const handleVehicleClick = async ({ target }) => {
+        const { name } = target;
+        const starshipData = await fetchOneStarship(name);
+        setOneStarship(starshipData);
+        history.push('/each-starship');
     };
 
     return (
@@ -28,7 +34,11 @@ function People() {
                     <tr key={ p.name }>
                         <td>{ p.name }</td>
                         <td>{ p.birth_year }</td>
-                        <td onClick={ handleVehicleClick }>{ p.vehicles + p.starships  }</td>
+                        <td onClick={ handleVehicleClick }>
+                            <div>
+                           { p.vehicles.concat(p.starships).map((s) => <button key={ s } name={ s }>{ s }</button>) }
+                            </div>
+                        </td>
                         <td>{ p.homeworld }</td>
                     </tr>
                 ))}
