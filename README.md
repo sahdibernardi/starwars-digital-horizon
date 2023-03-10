@@ -3,6 +3,8 @@
 ## About This Project
 This project is a challenge to create a system that consumes the SWAPI endpoint (https://swapi.dev/) and displays information about planets and characters in the Star Wars universe.
 
+You can checkout the deployed version uptodate here: https://starwars-digital-horizon.vercel.app/
+
 ## Introduction
 The goal of this project is to create a webpage with a menu that allows the user to select between two options:
 
